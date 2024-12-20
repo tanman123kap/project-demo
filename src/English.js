@@ -51,10 +51,10 @@ export default function English() {
                 </div>
             </div>
             <div className="row my-2">
-                <div className="col-5 col-md-12">
+                <div className="col-lg-5 col-sm-12 mb-2">
                     <input type="text" className="form-control" placeholder="Age" aria-label="Age" />
                 </div>
-                <div className="col-4 col-md-8">
+                <div className="col-lg-4 col-sm-8">
                     <select className="form-select" value={feet} onChange={handleFe}>
                         <option selected>Height Ft.</option>
                         <option value="3">3 ft</option>
@@ -65,7 +65,7 @@ export default function English() {
                         <option value="8">8 ft</option>
                     </select>
                 </div>
-                <div className="col-3 col-md-4">
+                <div className="col-lg-3 col-sm-4">
                     <select className="form-select" value={inch} onChange={handleIn}>
                         <option selected>In.</option>
                         <option value="0">0 in</option>
@@ -84,7 +84,7 @@ export default function English() {
                 </div>
             </div>
             <div className="row my-2">
-                <div className="col-6 col-md-12">
+                <div className="col-lg-6 col-sm-12">
                     <input type="text" className="form-control" value={weight} onChange={handleWT} placeholder="Current Weight lbs" />
                 </div>
             </div>
