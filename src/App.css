@@ -7,3 +7,9 @@
     width: 50vw;
     height: auto;
 }
+@media screen and (max-width:900px) {
+    .card {
+        width: 90vw;
+        height: auto;
+    }
+}
