@@ -17,17 +17,17 @@ export default function Metric() {
     const [hide, setHide] = useState("none");
     const showres = () => {
         setResult(res);
-        switch(res) {
-            case res < 16: setWeDiff("under weight");
-            break;
-            case 16 < res < 25: setWeDiff("healthy weight");
-            break;
-            case 30 > res > 25: setWeDiff("over weight");
-            break;
-            case res > 30: setWeDiff("obese");
-            break;
-            default: setWeDiff("healthy weight");
-        }
+        if(Number(res) < 16) {
+            setWeDiff("under weight");
+        } else if(Number(res) >= 16 && res < 25) {
+            setWeDiff("healthy weight");
+        } else if(Number(res) >= 25 && res < 30) {
+            setWeDiff("over weight");
+        } else if(Number(res) >= 30) {
+            setWeDiff("obese");
+        } else {
+            setWeDiff("healthy weight");
+        }        
         setHide("block");
     }
     return(
@@ -64,7 +64,7 @@ export default function Metric() {
             </button>
             <div className={`my-2 d-${hide}`}>
                 <strong className="text-info">Your Results</strong><br />
-                <b>Based on your body mass index &#8317;BMI&#8318; of {result}, you are classed at a {weDiff}.</b>
+                <b>Based on your body mass index &#8317;BMI&#8318; of {result}, you are classed as {weDiff}.</b>
             </div>
         </div>
     )
