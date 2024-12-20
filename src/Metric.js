@@ -47,15 +47,15 @@ export default function Metric() {
                 </div>
             </div>
             <div className="row my-2">
-                <div className="col">
+                <div className="col col-md-12">
                     <input type="text" className="form-control" placeholder="Age" aria-label="Age" />
                 </div>
-                <div className="col">
+                <div className="col col-md-12">
                     <input type="text" className="form-control" value={height} onChange={handleHT} placeholder="Height cm" />
                 </div>
             </div>
             <div className="row my-2">
-                <div className="col-6">
+                <div className="col-6 col-md-12">
                     <input type="text" className="form-control" value={weight} onChange={handleWT} placeholder="Current Weight kg" />
                 </div>
             </div>
